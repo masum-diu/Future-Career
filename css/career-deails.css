@@ -1,0 +1,211 @@
+ :root {
+     --primary: #4e54c8;
+     --primary-light: #8f94fb;
+     --secondary: #ff6b6b;
+     --dark: #2c3e50;
+     --light: #f8f9fa;
+     --gray: #6c757d;
+     --light-gray: #e9ecef;
+ }
+
+ body {
+     font-family: 'Poppins', sans-serif;
+     color: var(--dark);
+     background-color: #f5f7ff;
+ }
+
+ /* Loading Spinner */
+ .loading-spinner {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: rgba(255, 255, 255, 0.9);
+     z-index: 9999;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .spinner-border {
+     width: 3rem;
+     height: 3rem;
+     border-width: 0.25rem;
+     color: var(--primary);
+ }
+
+ /* Header Section */
+ .header-section {
+     background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+     padding: 100px 0 80px;
+     position: relative;
+     overflow: hidden;
+     color: white;
+ }
+
+ .header-section::before {
+     content: '';
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     width: 100%;
+     height: 100px;
+     background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="%23ffffff"></path><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" fill="%23ffffff"></path><path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="%23ffffff"></path></svg>');
+     background-size: cover;
+     background-repeat: no-repeat;
+ }
+
+ .back-button {
+     position: absolute;
+     top: 30px;
+     left: 30px;
+     background: rgba(255, 255, 255, 0.2);
+     border: none;
+     border-radius: 50px;
+     padding: 8px 15px 8px 10px;
+     color: white;
+     font-weight: 500;
+     transition: all 0.3s ease;
+ }
+
+ .back-button:hover {
+     background: rgba(255, 255, 255, 0.3);
+     transform: translateX(-5px);
+ }
+
+ /* Career Image */
+ .career-image-container {
+     border-radius: 12px;
+     overflow: hidden;
+     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+     border: 1px solid rgba(0, 0, 0, 0.1);
+     object-fit: cover;
+     /* height: 100%; */
+     display: flex;
+     align-items: center;
+     background: white;
+ }
+
+ .career-image {
+     width: 100%;
+     height: auto;
+     max-height: 400px;
+     object-fit: contain;
+ }
+
+ /* Content Cards */
+ .content-card {
+     border: none;
+     border-radius: 12px;
+     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+     margin-bottom: 25px;
+     overflow: hidden;
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+ }
+
+ .content-card:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+ }
+
+ .card-header {
+     background: linear-gradient(to right, var(--primary), var(--primary-light));
+     color: white;
+     font-weight: 600;
+     padding: 15px 20px;
+     border-bottom: none;
+ }
+
+ .card-body {
+     padding: 25px;
+ }
+
+ /* Requirement Items */
+ .requirement-item {
+     margin-bottom: 12px;
+     position: relative;
+     padding-left: 30px;
+     line-height: 1.6;
+ }
+
+ .requirement-item:before {
+     content: '';
+     position: absolute;
+     left: 0;
+     top: 8px;
+     width: 18px;
+     height: 18px;
+     background-color: var(--primary);
+     border-radius: 50%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     color: white;
+     font-size: 10px;
+     font-weight: bold;
+ }
+
+ /* Quick Facts */
+ .quick-facts-card {
+     background: white;
+     border-radius: 12px;
+     padding: 25px;
+     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+     margin-bottom: 25px;
+ }
+
+ .fact-item {
+     margin-bottom: 20px;
+     padding-bottom: 20px;
+     border-bottom: 1px solid var(--light-gray);
+ }
+
+ .fact-item:last-child {
+     margin-bottom: 0;
+     padding-bottom: 0;
+     border-bottom: none;
+ }
+
+ .fact-label {
+     color: var(--gray);
+     font-size: 0.9rem;
+     margin-bottom: 5px;
+ }
+
+ .fact-value {
+     font-weight: 600;
+     font-size: 1.1rem;
+     color: var(--dark);
+ }
+
+ /* Footer */
+ .footer {
+     background: var(--dark);
+     color: white;
+     padding: 30px 0;
+     margin-top: 50px;
+ }
+
+ /* Responsive Adjustments */
+ @media (max-width: 992px) {
+     .header-section {
+         padding: 80px 0 60px;
+     }
+
+     .back-button {
+         top: 20px;
+         left: 20px;
+     }
+ }
+
+ @media (max-width: 768px) {
+     .header-section {
+         padding: 70px 0 50px;
+     }
+
+     .career-image-container {
+         margin-bottom: 30px;
+     }
+ }

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Future Careers</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: var(--dark-color);">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">
+        <i class="fas fa-rocket me-2"></i>Future Careers
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#"><i class="fas fa-home me-1"></i> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-info-circle me-1"></i> About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-envelope me-1"></i> Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section text-white">
+    <div class="container text-center py-5">
+      <h1 class="display-4 fw-bold mb-3">Explore Popular Career Paths</h1>
+      <p class="lead mb-4">Discover in-demand careers and unlock exciting opportunities for your future.</p>
+      
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <div class="container my-5">
+    <!-- Blob background elements -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+    
+    <!-- Search and Filter Section -->
+    <div class="search-container">
+      <div class="row g-3">
+        <div class="col-md-6">
+          <div class="input-group">
+            <span class="input-group-text search-icon bg-white border-end-0">
+              <i class="fas fa-search"></i>
+            </span>
+            <input type="text" id="searchInput" class="form-control search-input border-start-0" placeholder="Search careers...">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <select id="departmentFilter" class="form-select filter-select">
+            <option value="">All Departments</option>
+            <!-- Departments will be loaded dynamically -->
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div class="text-center loading-spinner my-5">
+      <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <p class="mt-3 fs-5">Loading career opportunities...</p>
+    </div>
+
+    <!-- Career List -->
+    <div class="row g-4" id="careerList">
+      <!-- Careers will be loaded here -->
+    </div>
+
+    <!-- No Results Message -->
+    <div id="noResults" class="text-center py-5" style="display: none;">
+      <img src="https://cdn-icons-png.flaticon.com/512/4076/4076478.png" alt="No results" style="height: 120px; opacity: 0.7;" class="mb-4">
+      <h4 class="text-muted">No careers match your search</h4>
+      <p class="text-muted">Try adjusting your filters or search term</p>
+      <button id="resetFilters" class="btn btn-primary mt-3">Reset Filters</button>
+    </div>
+
+    <!-- Pagination -->
+    <nav aria-label="Page navigation" id="paginationContainer">
+      <ul class="pagination">
+        <!-- Pagination will be loaded here -->
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4 mb-md-0">
+          <h5 class="fw-bold mb-3">Future Careers</h5>
+          <p>Helping you discover and prepare for the careers of tomorrow.</p>
+          <div class="social-icons mt-3">
+            <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="col-md-2 mb-4 mb-md-0">
+          <h5 class="fw-bold mb-3">Explore</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#" class="text-white text-decoration-none">Home</a></li>
+            <li class="mb-2"><a href="#" class="text-white text-decoration-none">Careers</a></li>
+            <li class="mb-2"><a href="#" class="text-white text-decoration-none">Resources</a></li>
+            <li class="mb-2"><a href="#" class="text-white text-decoration-none">Blog</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 mb-4 mb-md-0">
+          <h5 class="fw-bold mb-3">Support</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#" class="text-white text-decoration-none">FAQ</a></li>
+            <li class="mb-2"><a href="#" class="text-white text-decoration-none">Contact</a></li>
+            <li class="mb-2"><a href="#" class="text-white text-decoration-none">Privacy</a></li>
+            <li class="mb-2"><a href="#" class="text-white text-decoration-none">Terms</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5 class="fw-bold mb-3">Newsletter</h5>
+          <p>Subscribe to get updates on new career opportunities.</p>
+          <div class="input-group mb-3">
+            <input type="email" class="form-control" placeholder="Your email">
+            <button class="btn btn-primary" type="button">Subscribe</button>
+          </div>
+        </div>
+      </div>
+      <hr class="my-4 bg-secondary">
+      <div class="text-center">
+        <p class="mb-0">&copy; 2023 Future Careers. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- jQuery and Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+ <script src="/js/career.js"></script>
+</body>
+</html>
