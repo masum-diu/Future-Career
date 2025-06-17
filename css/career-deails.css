@@ -117,7 +117,10 @@
      padding: 15px 20px;
      border-bottom: none;
  }
-
+.display-4{
+    /* color: var(--dark); */
+    height: 100px;
+}
  .card-body {
      padding: 25px;
  }
